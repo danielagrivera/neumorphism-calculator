@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "Poppins";
+    src: url(Poppins-Regular.ttf);
+}
+
+* {
+    font-family: "Poppins";
+}
+
+body {
+    margin: 40px;
+    background-color: #FFFDF0;
+}
+
+.stan {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.calcutype {
+    text-align: center;
+}
+
+.calculator {
+    max-width: 800px;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 47px;
+    background: #FAEDCD;
+    box-shadow: 6px 6px 5px #857a67,
+                -6px -6px 5px #ffffff;
+}
+
+.calculator .display {
+    position: relative;
+    font-size: 30px;
+    text-align: right;
+    width: 560px;
+    height: 65px;
+    border-radius: 30px;
+    border: 0px;
+    color: #000000;
+    padding: 0 50px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 47px;
+    background: #d9ceaf;
+    box-shadow: inset 8px 8px 4px #a9a189,
+                inset -8px -8px 4px #fffbd6;
+}
+
+.calcubtns {
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button {
+    font-size: 20px;
+    margin: 10px;
+    width: 89px;
+    height: 45px;
+    border: none;
+    border-radius: 30px;
+    color: #000000;
+    cursor: pointer;
+    padding: 10px;
+    transition: all .5s ease;
+}
+ 
+button:hover {
+   background: #c8ae80;
+   transition: .2s;
+   box-shadow: 6px 6px 5px #857a67,
+               -6px -6px 5px #ffffff;
+}
+
+button:active {
+    background: linear-gradient(145deg, #fffff0, #e5e1ca);
+    box-shadow: 6px 6px 5px #857a67,
+                -6px -6px 5px #ffffff;
+    transform: translateY(4px);
+    transition: 100ms;
+}
+
+.scical {
+    width: 347px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.basiccal {
+    width: 446px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.numbers {
+    border-radius: 47px;
+    background: linear-gradient(145deg, #fffff0, #e5e1ca);
+    box-shadow:  6px 6px 5px #857a67,
+    -6px -6px 5px #ffffff;
+}
+
+.operators, .complex, .triggers {
+    border-radius: 47px;
+    background: linear-gradient(145deg, #ffeec9, #dac8a9);
+    box-shadow:  6px 6px 5px #857a67,
+                 -6px -6px 5px #ffffff;
+}
+
+
+@media only screen and (max-width:1400px) {
+    .scical {
+        display: none;
+    }
+    .basiccal {
+        display: block;
+        width: 453px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .calculator {
+        max-width: 500px;
+    }
+    .calculator .display {
+        width: 400px;
+    }
+    [data-alttext] > span {
+        display: none;
+    }
+    
+    [data-alttext]::before {
+        content: attr(data-alttext);
+    }
+}
